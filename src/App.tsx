@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        // fetch("https://
+
+    })
+
+    return (
+        <div className="App">
+            <div className="query-container">
+                <input type="text" placeholder="search for the greates cat giph ever" />
+                <select name="text-placement">
+                    <option value="top-image-placement">Place text at the top of the image</option>
+                    <option value="bottom-image-placement">Place text at the bottom of the image</option>
+                    <option value="below-placement">Place text below the image</option>
+                </select>
+            </div>
+            <div className="display-container">
+                <img alt="" src=""/>
+                <p id="image-text"></p>
+                <img alt="" src=""/>
+                <p id="image-text"></p>
+                <img alt="" src=""/>
+                <p id="image-text"></p>
+            </div>
+        </div>
+    );
 }
 
 export default App;
