@@ -36,7 +36,6 @@ function App() {
             <div className="query-container">
                 <form onSubmit={getImages}>
                     <input type="text" name="user-input" placeholder="search for the greates cat giph ever" />
-                    <p id="image-text"></p>
                     <select name="text-placement">
                         <option value="top-image-placement">Place text at the top of the image</option>
                         <option value="bottom-image-placement">Place text at the bottom of the image</option>
@@ -46,9 +45,12 @@ function App() {
                 </form>
             </div>
             <div className="display-container">
-                { gifImagesData.map((imageData: any) => {
-                    return <img key="" alt="" src={imageData.url} width={imageData.width} height={imageData.height} />
-                }) ?? <p></p>}
+                <p id="image-text"> Image Text</p>
+                <div className="gif-container">
+                    { gifImagesData.map((imageData: any) => {
+                        return <img key="" alt="" className="gif" src={imageData.url} width={imageData.width} height={imageData.height} />
+                    }) ?? <p></p>}
+                </div>
             </div>
         </div>
     );
