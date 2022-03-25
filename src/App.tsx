@@ -24,7 +24,7 @@ function App() {
         event.preventDefault()
 
         const formData = new FormData(event.currentTarget);
-        const userInput = formData.get("user-input")
+        const userInput = formData.get("user-input")?.toString() ?? "cat"
 
         const gifs = await searchGiphy(userInput)
         const data = gifs.data.map((gif: any) => gif.images.downsized_medium)
